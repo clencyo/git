@@ -1,5 +1,7 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from .models import Student
 
 def about(request):
     return render(request, 'about.html')
@@ -23,6 +25,9 @@ def feature(request):
 
 def index(request):
     return render(request, 'index.html')
+
+def farmers(request):
+    return render(request, 'farmers.html')
 
 
 def service(request):

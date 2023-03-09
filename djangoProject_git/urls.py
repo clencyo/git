@@ -19,6 +19,10 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.farmers, name='farmers'),
+    path('insert', views.insertData, name='insertData'),
+    path('delete/<id>', views.deleteData, name='deleteData'),
+    path('update/<id>', views.updateData, name='updateData'),
     path('about/', views.about, name='about'),
     path('blog/', views.contact, name='contact'),
     path('detail/', views.detail, name='detail'),
@@ -26,10 +30,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('service/', views.service, name='service'),
     path('team/', views.team, name='team'),
-    path('testimonial/', views.testimonial, name='testimonial'),
-    path('insert',views.insertData,name='insertData'),
-    path('delete/<id>', views.deleteData, name='deleteData'),
-    path('update/<id>', views.updateData, name='updateData')
+    path('testimonial/', views.testimonial, name='testimonial')
 
 
 ]
